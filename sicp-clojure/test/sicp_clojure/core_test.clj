@@ -23,4 +23,4 @@
 (facts "1.1.2 naming"
        (fact "def is the association of a name to a computational object"
              (let [lenght 2]
-               (* lenght length) => 4)))
+               (* lenght lenght) => 4)))
