@@ -1,1 +1,0 @@
-racket -f $1 -i
