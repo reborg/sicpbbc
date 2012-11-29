@@ -19,3 +19,22 @@
 (check-equal? (sum-square-biggest-two 1 2 2) 8 "two numbers are the same")
 (check-equal? (sum-square-biggest-two 2 2 2) 8 "they are all the same")
 (check-equal? (sum-square-biggest-two 0 0 0) 0 "all zeros")
+
+; alternative implementation from IAN
+
+(define (sq a) 
+  (* a a))
+
+(define (min2 a b) 
+  (if (< a b) a b))
+
+(define (min3 a b c) 
+  (min2 a (min2 b c)))
+
+(define (sq2largest a b c) 
+  (- (+ (sq a) (sq b) (sq c)) (sq (min3 a b c))))
+
+(check-equal? (sq2largest 1 2 3) 13 "three different numbers")
+(check-equal? (sq2largest 1 2 2) 8 "two numbers are the same")
+(check-equal? (sq2largest 2 2 2) 8 "they are all the same")
+(check-equal? (sq2largest 0 0 0) 0 "all zeros")
