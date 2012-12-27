@@ -1,12 +1,12 @@
 (ns sicp-clojure.1-8-cube-root
-  (:require [clojure.math.numeric-tower :as math]))
+  (:require [clojure.math.numeric-tower :as math])
+  (:use [sicp-clojure.utils]))
 
 (defn cbrt-iter
   [guess x]
-  (let [good-enough? (fn [guess] (< (math/abs (- (* guess guess guess) x))
-                                   0.001))
+  (let [good-enough? (fn [guess] (accurate-within? (cube guess) x 0.001))
         improve      (fn [guess] (/ (+ (/ x
-                                         (* guess guess))
+                                         (square guess))
                                       (* 2 guess))
                                    3))]
     (loop [current-guess guess]
