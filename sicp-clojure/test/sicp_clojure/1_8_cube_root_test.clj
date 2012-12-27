@@ -12,4 +12,11 @@
        (fact "The cube root function is accurate to within 1 decimal place for numbers less than 1"
              (utils/accurate-within? (math/expt 0.01 (/ 1 3))
                                      (cbrt 0.01)
-                                     0.01) => true))
+                                     0.01) => true)
+       (fact "The cube root function is not accurate to 5 decimal places for numbers less than 1"
+             (utils/accurate-within? (math/expt 0.01 (/ 1 3))
+                                     (cbrt 0.01)
+                                     0.000001) => false
+             (utils/accurate-within? (math/expt 0.00009 (/ 1 3))
+                                     (cbrt 0.00009)
+                                     0.000001) => false))
