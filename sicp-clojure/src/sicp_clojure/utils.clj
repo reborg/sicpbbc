@@ -5,6 +5,10 @@
   [x]
   (* x x x))
 
+(defn cube-root
+  [x]
+  (math/expt x (/ 1 3)))
+
 (defn square
   [x]
   (* x x))

@@ -14,10 +14,6 @@
         current-guess
         (recur (improve current-guess))))))
 
-(defn cube-root
-  [x]
-  (math/expt x (/ 1 3)))
-
 (defn cbrt
   [x]
   (cbrt-iter 1.0 x))
