@@ -1,7 +1,0 @@
-#! /bin/sh
-echo ... executing all tests in folder
-FILES=`find $PWD -iname "*-test*" -type f -print`
-for f in $FILES ; do
-   echo '... executing ' $f
-   racket $f
-done
