@@ -10,6 +10,14 @@
       y
       (recur (dec x) (inc y)))))
 
+;; This plus implementaiton is not tail-recursive and as such recur
+;; cannot be used to make this an iterative process. It will blow the stack for
+;; sufficiently big values of a.
+(defn another-plus [a b]
+  (if (= a 0)
+      b
+      (inc (another-plus (dec a) b))))
+
 ;; The following scheme function can't be ported to Clojure
 ;;
 ;; (define (+ a b)
@@ -23,3 +31,4 @@
 ;; function inside the argument of the inc function. We
 ;; would not be able to do this in Clojure: we can't call
 ;; recur inside the inc function.
+;; RENZO: true, but you are not forced to use recur. See above.
