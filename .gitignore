@@ -5,3 +5,8 @@ tags
 logs
 doc
 .DS_Store
+.cache
+.classpath
+.project
+bin
+lib
