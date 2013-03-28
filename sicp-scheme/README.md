@@ -1,5 +1,5 @@
 # SICP exercises Scheme implementation
-And in what other language they should ever be? :)
+And in what other language they should ever be? :) The read-along folder contains the snippets of code used for explanations in chapters, not exercises that are instead in the same folder of this README file.
 
 ## Installing Scheme on MacOS X
 There is a good thread about what Scheme implementation to use to follow along with SICP exercises [on StackOverflow](http://stackoverflow.com/questions/459323/what-is-the-best-scheme-or-lisp-implementation-for-os-x) and it essentially boils down to the great out-of-the-box experience of Racket (ex Dr.Scheme). MIT Scheme is also the primary choice although it requires a little bit more setup (and runs under X in MacOs which I hate).
