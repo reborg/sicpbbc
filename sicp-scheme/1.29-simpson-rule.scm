@@ -4,7 +4,7 @@
 
 (define (yk f a b n) 
   (f (+ a (* n (h a b n)))))
-
+;; try outer function
 (define (bart f a b n)
   (if (= n 0)
     0
