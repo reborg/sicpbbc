@@ -13,6 +13,17 @@
 
 (define (test f a)
   (f a))
-  
+;; exercise 1.3.4
+;;What happens if we (perversely) ask the interpreter to evaluate the combination(f f)?Explain.
+
+(define (f g) (g 2))
+
+(define (square x) (* x x))
+
+(f square)
+
+(f (lambda (z) (* z (+ z 1))))
+
+(f f)
 
 (provide test pi-sum)
