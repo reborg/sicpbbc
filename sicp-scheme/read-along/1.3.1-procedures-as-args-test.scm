@@ -60,8 +60,3 @@
 (define dx 0.01)
 (define (f n) (cube n))
 (define (g n) (+ n dx))
-
-(define (sum-cube-integral a b)
-  (* dx (sum f (+ a (/ dx 2)) g b)))
-
-(check-equal? (sum-cube-integral 0 1) 55 "exactly as before")
