@@ -11,3 +11,5 @@ doc
 bin
 lib
 sicp.pdf
+sicp-clojure/.lein-repl-history
+sicp-clojure/.tmux
